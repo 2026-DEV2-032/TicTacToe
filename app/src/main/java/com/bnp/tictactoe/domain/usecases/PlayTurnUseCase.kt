@@ -14,7 +14,7 @@ class PlayTurnUseCase() {
 
         val newBord = board.takeCell(x, y, player.character)
         val checkWinner = checkWinner(newBord)
-        val isBoardFull = board.isFull()
+        val isBoardFull = newBord.isFull()
         val switchPlayer = player.switch()
 
         return GameState(

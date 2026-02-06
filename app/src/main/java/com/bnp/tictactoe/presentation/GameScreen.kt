@@ -38,7 +38,6 @@ fun GameScreen(
     state: GameUiState,
     onAction: (GameUiAction) -> Unit
 ) {
-
     val boardListItem = state.board.toBoardUi().boardListItem
 
     Column(
@@ -76,7 +75,6 @@ fun GameScreen(
         }
         Button({ onAction(GameUiAction.RestartGame) }) {
             Text(stringResource(R.string.restart_game))
-
         }
         if (state.winner != null) {
             Text(text = stringResource(R.string.winner_is_player, state.winner.character))
@@ -84,7 +82,6 @@ fun GameScreen(
         if (state.isBoardFull && state.winner == null) {
             Text(text = stringResource(R.string.game_is_draw))
         }
-
 
     }
 

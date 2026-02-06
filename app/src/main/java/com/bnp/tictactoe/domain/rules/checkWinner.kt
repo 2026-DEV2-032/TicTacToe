@@ -1,8 +1,7 @@
 package com.bnp.tictactoe.domain.rules
 
+import com.bnp.tictactoe.domain.models.GameBoard
 import com.bnp.tictactoe.domain.models.Player
-import com.bnp.tictactoe.domain.utils.GameBoard
-
 
 fun checkWinner(board: GameBoard): Player? {
     val characterOfTheWinner = getPossibleWinCombinationsHardCoded(board)

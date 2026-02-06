@@ -1,9 +1,7 @@
 package com.bnp.tictactoe.presentation.mappers
 
-import com.bnp.tictactoe.domain.models.GameState
-import com.bnp.tictactoe.domain.utils.GameBoard
+import com.bnp.tictactoe.domain.models.GameBoard
 import com.bnp.tictactoe.presentation.BoardItem
-import com.bnp.tictactoe.presentation.GameUiState
 import com.bnp.tictactoe.presentation.UiGameBoard
 
 fun GameBoard.toBoardUi(): UiGameBoard {
@@ -17,16 +15,6 @@ fun GameBoard.toBoardUi(): UiGameBoard {
     }
     return UiGameBoard(list.toList())
 }
-
-fun GameState.toUiGameState(): GameUiState {
-
-    return GameUiState(
-        board = board,
-        currentPlayer = this.currentPlayer,
-        winner = this.winner
-    )
-}
-
 
 
 

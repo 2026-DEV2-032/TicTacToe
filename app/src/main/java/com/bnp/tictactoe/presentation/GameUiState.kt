@@ -1,7 +1,7 @@
 package com.bnp.tictactoe.presentation
 
+import com.bnp.tictactoe.domain.models.GameBoard
 import com.bnp.tictactoe.domain.models.Player
-import com.bnp.tictactoe.domain.utils.GameBoard
 
 data class GameUiState(
     val board: GameBoard = GameBoard(),

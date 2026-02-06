@@ -176,8 +176,8 @@ class CheckWinnerTest {
         val playTurn = PlayTurnUseCase()
         val board = emptyBoard()
         for (i in 0..2) {
-            board.boardCells[0][2 - i] = 'X'
-            board.boardCells[1][1 - i] = 'X'
+            board.boardCells[0][2] = 'X'
+            board.boardCells[1][1] = 'X'
             board.boardCells[2][0] = 'X'
             board.boardCells[i][2 - i] = null
             println("board before: ${board}\n")
@@ -186,6 +186,21 @@ class CheckWinnerTest {
             println("board after: ${result.board}\n")
             assertThat(result.winner).isEqualTo(Player('X'))
         }
+    }
+
+    @Test
+    fun `given diagonal right to left nearly full of the same player, when the last cell is filled x0 y2, then the winner is the player`() {
+        val playTurn = PlayTurnUseCase()
+        val board = emptyBoard()
+        board.boardCells[0][2] = 'X'
+        board.boardCells[1][1] = 'X'
+        board.boardCells[2][0] = null
+        println("board before: ${board}\n")
+        println(" x = 0, y = 2")
+        val result = playTurn(board, 0, 2, Player('X'))
+        println("board after: ${result.board}\n")
+        assertThat(result.winner).isEqualTo(Player('X'))
+
     }
 
 }

@@ -5,8 +5,6 @@ import com.bnp.tictactoe.domain.models.GameState
 import com.bnp.tictactoe.domain.models.Player
 import com.bnp.tictactoe.domain.rules.checkWinner
 
-//rules ... if the winner is the first to align X on a larger board or the player which has the most number of combination set on a full board
-//flexibility to change the
 class PlayTurnUseCase() {
 
     operator fun invoke(board: GameBoard, x: Int, y: Int, player: Player): GameState {
@@ -15,7 +13,7 @@ class PlayTurnUseCase() {
         }
 
         val newBord = board.takeCell(x, y, player.character)
-        val checkWinner = checkWinner(board, player, x, y)
+        val checkWinner = checkWinner(newBord)
         val isBoardFull = board.isFull()
         val switchPlayer = player.switch()
 

@@ -4,7 +4,7 @@ import assertk.assertThat
 import assertk.assertions.isFalse
 import assertk.assertions.isTrue
 import com.bnp.tictactoe.emptyBoard
-import com.bnp.tictactoe.fullBoard
+import com.bnp.tictactoe.fullBoardWithWinner
 import com.bnp.tictactoe.middleOfTheGameBoard
 import kotlinx.coroutines.test.runTest
 import org.junit.Before
@@ -33,7 +33,7 @@ class GameBoardTest {
 
     @Test
     fun `the board is full, the methode isFull is true`() {
-        val board = fullBoard()
+        val board = fullBoardWithWinner()
         assertThat(board.isFull()).isTrue()
     }
 

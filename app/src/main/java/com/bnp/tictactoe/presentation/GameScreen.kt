@@ -21,12 +21,14 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
+import com.bnp.tictactoe.R
 import com.bnp.tictactoe.domain.usecases.PlayTurnUseCase
 import com.bnp.tictactoe.presentation.mappers.toBoardUi
 
@@ -74,14 +76,14 @@ fun GameScreen(
             }
         }
         Button({ onAction(GameUiAction.RestartGame) }) {
-            Text("Restart Game")
+            Text(stringResource(R.string.restart_game))
 
         }
         if (state.winner != null) {
-            Text(text = "Winner is Player ${state.winner.character}")
+            Text(text = stringResource(R.string.winner_is_player, state.winner.character))
         }
         if (state.isBoardFull && state.winner == null) {
-            Text(text = "Game is Draw")
+            Text(text = stringResource(R.string.game_is_draw))
         }
 
 

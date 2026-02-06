@@ -50,9 +50,11 @@ Sources : [Tic tac toe](https://github.com/stephane-genicot/katas/blob/master/Ti
 
 ## Demo
 
-![Tic Tac Toe app preview](https://github.com/2026-DEV2-032/TicTacToe/blob/main/docs/images/win.png)
-![Tic Tac Toe app video preview](https://github.com/2026-DEV2-032/TicTacToe/blob/main/docs/videos/demo.gif)
+The demo shows:
 
+- A draw party
+- A winner party
+- ![Tic Tac Toe app video preview](https://github.com/2026-DEV2-032/TicTacToe/blob/main/docs/videos/demo.gif)
 
 The demo shows:
 

@@ -1,6 +1,8 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.compose)
+    alias(libs.plugins.android.junit5)
+
 }
 
 android {
@@ -35,7 +37,15 @@ android {
     buildFeatures {
         compose = true
     }
+    packaging {
+        resources {
+            excludes += "META-INF/LICENSE.md"
+            excludes += "META-INF/LICENSE-notice.md"
+        }
+    }
+
 }
+
 
 dependencies {
     implementation(libs.androidx.core.ktx)
@@ -45,8 +55,18 @@ dependencies {
     implementation(libs.androidx.compose.ui)
     implementation(libs.androidx.compose.ui.graphics)
     implementation(libs.androidx.compose.ui.tooling.preview)
+    implementation(libs.android.lifecycle.viewModel.compose)
     implementation(libs.androidx.compose.material3)
-    testImplementation(libs.junit)
+    implementation(libs.junit)
+    implementation(libs.jupiter)
+
+    testRuntimeOnly(libs.jupiter.engine)
+    testImplementation(libs.jupiter.api)
+    testImplementation(libs.jupiter.params)
+    testImplementation(libs.coroutine.test)
+    testImplementation(libs.willowtreeapps.assertk)
+
+
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(platform(libs.androidx.compose.bom))

@@ -1,14 +1,14 @@
 package com.bnp.tictactoe.presentation
 
 import androidx.lifecycle.ViewModel
-import com.bnp.tictactoe.domain.usecases.PlayTurnUseCase
+import com.bnp.tictactoe.domain.usecases.PlayTurnUseCaseInterface
 import com.bnp.tictactoe.presentation.utils.toPosition
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 
 
 class GameViewModel(
-    private val playTurn: PlayTurnUseCase
+    private val playTurn: PlayTurnUseCaseInterface
 ) : ViewModel() {
     private var _state = MutableStateFlow(
         GameUiState()

@@ -5,9 +5,9 @@ import com.bnp.tictactoe.domain.models.GameState
 import com.bnp.tictactoe.domain.models.Player
 import com.bnp.tictactoe.domain.rules.checkWinner
 
-class PlayTurnUseCase() {
+class PlayTurnUseCase() : PlayTurnUseCaseInterface {
 
-    operator fun invoke(board: GameBoard, x: Int, y: Int, player: Player): GameState {
+    override operator fun invoke(board: GameBoard, x: Int, y: Int, player: Player): GameState {
         if (!board.isValidCell(x, y)) {
             return GameState(board = board, currentPlayer = player)
         }

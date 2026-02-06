@@ -1,6 +1,6 @@
 package com.bnp.tictactoe
 
-import com.bnp.tictactoe.domain.models.GameBoard
+import com.bnp.tictactoe.domain.utils.GameBoard
 import com.bnp.tictactoe.presentation.BoardItem
 import com.bnp.tictactoe.presentation.UiGameBoard
 import com.bnp.tictactoe.presentation.utils.toPosition
@@ -25,7 +25,6 @@ fun firstCellFreePositionBoard(): GameBoard {
         )
     )
 }
-
 
 fun fullBoardWithWinner(): GameBoard {
     return GameBoard(
@@ -62,7 +61,6 @@ fun fullBoardWithoutWinner(): GameBoard {
         )
     )
 }
-
 
 fun emptyBoard(): GameBoard {
     return GameBoard(

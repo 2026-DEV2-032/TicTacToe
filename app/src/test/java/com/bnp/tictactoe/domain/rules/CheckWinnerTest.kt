@@ -6,9 +6,9 @@ import assertk.assertions.isFalse
 import assertk.assertions.isNull
 import assertk.assertions.isTrue
 import com.bnp.tictactoe.createGameBoardWithEmptyCellAtPosition
-import com.bnp.tictactoe.domain.models.GameBoard
 import com.bnp.tictactoe.domain.models.Player
 import com.bnp.tictactoe.domain.usecases.PlayTurnUseCase
+import com.bnp.tictactoe.domain.utils.GameBoard
 import com.bnp.tictactoe.emptyBoard
 import com.bnp.tictactoe.firstCellFreePositionBoard
 import com.bnp.tictactoe.presentation.utils.toPosition

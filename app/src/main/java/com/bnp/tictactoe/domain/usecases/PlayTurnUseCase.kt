@@ -1,9 +1,9 @@
 package com.bnp.tictactoe.domain.usecases
 
-import com.bnp.tictactoe.domain.models.GameBoard
 import com.bnp.tictactoe.domain.models.GameState
 import com.bnp.tictactoe.domain.models.Player
 import com.bnp.tictactoe.domain.rules.checkWinner
+import com.bnp.tictactoe.domain.utils.GameBoard
 
 class PlayTurnUseCase() {
 

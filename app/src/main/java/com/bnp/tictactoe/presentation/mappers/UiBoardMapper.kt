@@ -1,7 +1,7 @@
 package com.bnp.tictactoe.presentation.mappers
 
-import com.bnp.tictactoe.domain.models.GameBoard
 import com.bnp.tictactoe.domain.models.GameState
+import com.bnp.tictactoe.domain.utils.GameBoard
 import com.bnp.tictactoe.presentation.BoardItem
 import com.bnp.tictactoe.presentation.GameUiState
 import com.bnp.tictactoe.presentation.UiGameBoard

@@ -3,6 +3,7 @@ package com.bnp.tictactoe.domain.models
 import assertk.assertThat
 import assertk.assertions.isFalse
 import assertk.assertions.isTrue
+import com.bnp.tictactoe.domain.utils.GameBoard
 import com.bnp.tictactoe.emptyBoard
 import com.bnp.tictactoe.fullBoardWithWinner
 import com.bnp.tictactoe.middleOfTheGameBoard

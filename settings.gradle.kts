@@ -21,3 +21,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "Tic Tac Toe"
 include(":app")
+include(":lib")
+include(":presentation")

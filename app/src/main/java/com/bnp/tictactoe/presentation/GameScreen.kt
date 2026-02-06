@@ -32,7 +32,6 @@ import com.bnp.tictactoe.R
 import com.bnp.tictactoe.domain.usecases.PlayTurnUseCase
 import com.bnp.tictactoe.presentation.mappers.toBoardUi
 
-
 @Composable
 fun GameScreen(
     modifier: Modifier,
@@ -47,7 +46,7 @@ fun GameScreen(
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Text(text = "it is Player ${state.currentPlayer.character} turn")
+        Text(text = stringResource(R.string.it_is_player_turn, state.currentPlayer.character))
         LazyVerticalGrid(
             columns = GridCells.Fixed(state.board.numberOfColumns),
             modifier = modifier

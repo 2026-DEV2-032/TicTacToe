@@ -48,6 +48,32 @@ Sources : [Tic tac toe](https://github.com/stephane-genicot/katas/blob/master/Ti
 - Built with Kotlin and Jetpack Compose
 - Uses MVVM architecture pattern
 
+## Demo
+
+<img src="doc/videos/demo.gif" width="400" alt="Tic Tac Toe app preview"/>
+
+The demo shows:
+
+- A draw party
+- A winner party
+
+## Project Structure
+
+```
+app/
+├── src/
+│   └── main/
+│       ├── java/com/bpn/toctactoe/
+│       │   ├── data/           # Data layer (repositories)
+│       │   ├── domain/         # Domain layer
+│       │   │   ├── model/      # Domain models (e.g., Stage, Performer)
+│       │   │   ├── rules/      # Rules related to game logic. Implementation in progress
+│       │   │   └── usecase/    # Business logic (use cases)
+│       │   └── presenter/      # UI layer (ViewModel, UI models, etc.)
+│       └── res/               # Android resources
+docs/                          # Documentation and demo materials
+```
+
 ## Applying Requirements
 
 - The commits are exposing the crafting process.

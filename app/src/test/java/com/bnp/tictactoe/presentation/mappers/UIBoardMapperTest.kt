@@ -2,7 +2,7 @@ package com.bnp.tictactoe.presentation.mappers
 
 import assertk.assertThat
 import assertk.assertions.isEqualTo
-import com.bnp.tictactoe.domain.models.GameBoard
+import com.bnp.tictactoe.domain.utils.GameBoard
 import com.bnp.tictactoe.fullBoardWithWinner
 import com.bnp.tictactoe.fullBoardWithWinnerdMapped
 import com.bnp.tictactoe.presentation.BoardItem

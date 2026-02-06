@@ -18,18 +18,20 @@ class GameViewModel(
     fun onAction(action: GameUiAction) {
         when (action) {
             is GameUiAction.ClickOnCellBoard -> {
-                val (x, y) = action.index.toPosition(
-                    state.value.board.numberOfLines,
-                    state.value.board.numberOfColumns
-                )
+                if ((state.value.winner == null) && (!state.value.isBoardFull)) {
+                    val (x, y) = action.index.toPosition(
+                        state.value.board.numberOfLines,
+                        state.value.board.numberOfColumns
+                    )
 
-                val gameState = playTurn(state.value.board, x, y, state.value.currentPlayer)
-                _state.value = _state.value.copy(
-                    board = gameState.board,
-                    isBoardFull = gameState.isBoardFull,
-                    winner = gameState.winner,
-                    currentPlayer = gameState.currentPlayer
-                )
+                    val gameState = playTurn(state.value.board, x, y, state.value.currentPlayer)
+                    _state.value = _state.value.copy(
+                        board = gameState.board,
+                        isBoardFull = gameState.isBoardFull,
+                        winner = gameState.winner,
+                        currentPlayer = gameState.currentPlayer
+                    )
+                }
             }
 
             GameUiAction.RestartGame -> {

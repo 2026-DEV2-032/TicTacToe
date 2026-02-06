@@ -142,4 +142,8 @@ From this commit point, commits will reflect incremental crafting steps.
   over-engineering.
 - The more I reflect on the past three days, the more I realize I approached it like an Advent of
   Code challenge, enjoying the game competition itself and sometimes losing sight of the main
-  objective. 
+  objective.
+- Coming from Atlassian suite workflows (Jira stories/bugs mapped to branches and commits), I
+  realized I can
+  apply the same structured approach on GitHub which I’m now practicing while learning GitHub more
+  deeply.

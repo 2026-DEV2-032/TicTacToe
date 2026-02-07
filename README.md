@@ -54,12 +54,8 @@ The demo shows:
 
 - A draw party
 - A winner party
-- ![Tic Tac Toe app video preview](https://github.com/2026-DEV2-032/TicTacToe/blob/main/docs/videos/demo.gif)
 
-The demo shows:
-
-- A draw party
-- A winner party
+![Tic Tac Toe app video preview](https://github.com/2026-DEV2-032/TicTacToe/blob/main/docs/videos/demo.gif)
 
 ## Project Structure
 
@@ -110,7 +106,7 @@ docs/                          # Documentation and demo materials
 - We expect you to spend up to a few hours on this
 - Allow to take 5 to 7 days
 
-## Reality
+## Crafting logs
 
 I realised after 3 days that I have not respected the crafting commit requirements. To stay
 transparent, I am documenting retrospectively the work done during the first three days, and will
